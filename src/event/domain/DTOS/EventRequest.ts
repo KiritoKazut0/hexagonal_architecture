@@ -4,5 +4,4 @@ export default interface CreateEventRequest {
     direccion: string,
     descripcion:string,
     fecha: string
-
 }

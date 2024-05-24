@@ -6,7 +6,16 @@ export default class CreateControllerEvent{
     constructor (readonly createEvent: CreateEventCase) {}
 
     async run (req: Request, res: Response){
-        const {} = req.body;
+        const {id_usuario, nombre_evento, direccion, descripcion, fecha} = req.body;
 
+        const newEvent: CreateEventRequest = {
+            id_usuario, 
+            nombre_evento, 
+            direccion, 
+            descripcion, 
+            fecha
+        }
+
+        const result = await this.createEvent.run(newEvent)
     }
 }

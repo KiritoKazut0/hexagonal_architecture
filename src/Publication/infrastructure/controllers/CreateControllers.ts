@@ -14,7 +14,5 @@ export default class CreateControllerPublication {
         };
 
         const result = await this.createPublication.run(publication)
-
     }
-
 }
