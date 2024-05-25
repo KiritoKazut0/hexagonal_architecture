@@ -1,20 +1,18 @@
 import { Request, Response } from "express";
-import getByUseCase from "../../aplication/GetByUseCase";
+import getByIdEventCase from "../../aplication/GetByIdEventCase";
 
-export default class GetByIdController {
-    constructor(readonly useCase: getByUseCase) { }
+export default class GetByIdEvent {
+    constructor(readonly useCase: getByIdEventCase){}
     async run(req: Request, res: Response) {
         const result = await this.useCase.run(req.params.id)
-
         if (result === null){
             return res.status(404).json({
-                msg: "User not found"
-            });
+                msg: "Event not found"
+            })
         }
         return res.status(200).json({
-            msg: "User found",
+            msg: "Event found",
             data: result
         })
-
     }
 }
