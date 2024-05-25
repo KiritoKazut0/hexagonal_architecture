@@ -1,6 +1,5 @@
 export default interface CreateEventEntry {
-    id: string,
-    id_usuario: string,
+    id_usuario: number,
     nombre_evento: string,
     direccion: string,
     descripcion:string,

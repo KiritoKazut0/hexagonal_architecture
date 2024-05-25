@@ -1,4 +1,4 @@
-import CreateEventRequest from "../domain/DTOS/EventRequest";
+import CreateEventRequest from "../domain/DTOS/CreateEventResponse";
 import EventRepository from "../domain/EventRepository";
 
 export default class CreateEventCase{

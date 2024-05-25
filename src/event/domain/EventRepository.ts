@@ -1,4 +1,4 @@
-import CreateEventRequest from "./DTOS/EventRequest"
+import CreateEventRequest from "./DTOS/CreateEventResponse"
 import EventEntry from "./EventEntry"
 
 

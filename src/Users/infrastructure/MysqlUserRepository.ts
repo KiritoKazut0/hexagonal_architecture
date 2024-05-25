@@ -7,7 +7,7 @@ export default class MysqlUserRepository implements UserRepository {
     constructor() { }
 
     async create(user: UserCreateRequest): Promise<userEntry | null> {
-        
+
         const sentence =
             "INSERT INTO Users (nombre, username, email, password, avatar, interests, carrera, estado, grupo, edad, rol) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
@@ -58,12 +58,12 @@ export default class MysqlUserRepository implements UserRepository {
     }
 
     async getById(id: string): Promise<userEntry | null> {
-        const setence:string = "SELECT * FROM Users WHERE id = ?";
+        const setence: string = "SELECT * FROM Users WHERE id = ?";
         const params = [id];
 
         try {
             const [entry]: any = await query(setence, params);
-           
+
             if (entry === null || entry.length === 0) {
                 return null
             }

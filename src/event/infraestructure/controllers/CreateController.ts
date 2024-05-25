@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import CreateEventCase from "../../aplication/CreeateEventCase";
-import CreateEventRequest from "../../domain/DTOS/EventRequest";
+import CreateEventCase from "../../aplication/CreateEventCase";
+import CreateEventRequest from "../../domain/DTOS/CreateEventResponse";
 export default class CreateControllerEvent{
     constructor (readonly createEvent: CreateEventCase) {}
     async run (req: Request, res: Response){
