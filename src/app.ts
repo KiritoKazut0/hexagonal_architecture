@@ -2,6 +2,8 @@ import dotenv from "dotenv"
 import express from "express"
 import cors from "cors"
 import userRoter from "../src/Users/infrastructure/UserRouter";
+import eventRoter from "../src/event/infraestructure/EventRouter";
+import publicationRoter from "../src/Publication/infrastructure/PublicationRouter";
 import commentsRouter from "./Comments/infrastructure/CommentsRouter";
 
 dotenv.config();
@@ -14,6 +16,8 @@ app.use(express.json());
 
 app.use('/users', userRoter);
 app.use('/coment', commentsRouter);
+app.use('/event', eventRoter)
+app.use('/publication', publicationRoter)
 
 app.listen(APP_PORT, () => {
     console.clear();
