@@ -1,5 +1,6 @@
 export default interface PublicationResponse {
     nombre: string,
-    contenido: string,
+    media: string
+    contenido: string
     
 }

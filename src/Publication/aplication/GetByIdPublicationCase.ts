@@ -11,7 +11,8 @@ export default class getByIdPublicationCase {
 
         const response : PublicationResponse = {
            nombre: result.nombre,
-            contenido: result.contenido
+            contenido: result.contenido,
+            media: result.media
 
         }
         return response

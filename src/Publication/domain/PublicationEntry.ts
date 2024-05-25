@@ -1,5 +1,8 @@
 export default interface PublicationEntry {
-        nombre: string
+        idUser: number,
         contenido: string,
-       
+        media: string,
+        idPublication: number,     
 }
+
+

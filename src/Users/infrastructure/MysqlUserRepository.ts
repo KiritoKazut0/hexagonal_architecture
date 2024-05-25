@@ -7,6 +7,7 @@ export default class MysqlUserRepository implements UserRepository {
     constructor() { }
 
     async create(user: UserCreateRequest): Promise<userEntry | null> {
+        
         const sentence =
             "INSERT INTO Users (nombre, username, email, password, avatar, interests, carrera, estado, grupo, edad, rol) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
@@ -62,7 +63,7 @@ export default class MysqlUserRepository implements UserRepository {
 
         try {
             const [entry]: any = await query(setence, params);
-            console.log(entry)
+           
             if (entry === null || entry.length === 0) {
                 return null
             }
